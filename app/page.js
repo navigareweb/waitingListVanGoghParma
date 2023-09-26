@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import copertina from "../public/copertina.png";
+import copertina from "../public/600x300.png";
 import styles from "./index.module.scss";
 
 export default function Home() {
@@ -9,24 +9,29 @@ export default function Home() {
       <div className={styles.copertina}>
         <Image
           src={copertina}
-          width={"100%"}
+          width={"auto"}
+          height={"auto"}
           className={"img"}
           alt="copertina"
+          priority
         />
         <p>
-          Dal <strong>28 Ottobre al 14 Gennaio</strong> la mostra{" "}
-          <strong> Miró a Torino </strong>
-          sarà al Mastio Della Cittadella di Torino. La mostra racchiude
-          all’incirca 100 opere tra dipinti, tempere, acquerelli, libri,
-          documenti, disegni, sculture e ceramiche provenienti da musei francesi
-          e collezionisti privati.
+          Dal <strong>27 Gennaio al 23 Giugno</strong> la mostra{" "}
+          <strong> Van Gogh - multimedia e la stanza segreta - </strong>
+          sarà al <strong>Palazzo Della Rosa Prati di Parma</strong>. La mostra
+          multimediale prende in esame, attraverso proiezioni in diversi
+          monitor, la vita e le opere del maestro, con la visione in video di
+          molti dipinti e disegni realizzati nel corso della sua esistenza,
+          completata con informazioni in italiano e inglese, dei periodi
+          artistici vissuti da Van Gogh negli ultimi 10 anni della sua vita.
         </p>
         <p>
-          La curatela è affidata al critico d’arte{" "}
-          <strong>Achille Bonito Oliva</strong>, fra i maggiori e più stimati in
-          Italia, insieme a Maïthé Vallès-Bled (già direttrice di musei
-          francesi) e a Vincenzo Sanfo, esperto d’arte e organizzatore di grandi
-          mostre internazionali.
+          Le opere sono istallate in maniera che l’osservatore possa entrare
+          dentro il quadro stesso e in modo che possa sentire così la trama
+          della tela, i tocchi di colori posati con la spatola, la composizione
+          ricercata, studiata, dove l’apparente caos ha dato luogo a quel cosmo
+          fantastico e immaginifico che ha reso Vincent Van Gogh eterno e vivo
+          nella storia di ognuno di noi.
         </p>
         <Link
           href={
@@ -39,7 +44,7 @@ export default function Home() {
       </div>
       <div className={styles.iscrizione}>
         <h4>
-          Iscriviti entro il 10 Ottobre alla nostra Waiting List per ricevere
+          Iscriviti entro il 31 Dicembre alla nostra Waiting List per ricevere
           uno sconto del 30%
         </h4>
         <h5>
