@@ -1,95 +1,64 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import Link from "next/link";
+import copertina from "../public/copertina.png";
+import styles from "./index.module.scss";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
+      <div className={styles.copertina}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src={copertina}
+          width={"100%"}
+          className={"img"}
+          alt="copertina"
         />
+        <p>
+          Dal <strong>28 Ottobre al 14 Gennaio</strong> la mostra{" "}
+          <strong> Miró a Torino </strong>
+          sarà al Mastio Della Cittadella di Torino. La mostra racchiude
+          all’incirca 100 opere tra dipinti, tempere, acquerelli, libri,
+          documenti, disegni, sculture e ceramiche provenienti da musei francesi
+          e collezionisti privati.
+        </p>
+        <p>
+          La curatela è affidata al critico d’arte{" "}
+          <strong>Achille Bonito Oliva</strong>, fra i maggiori e più stimati in
+          Italia, insieme a Maïthé Vallès-Bled (già direttrice di musei
+          francesi) e a Vincenzo Sanfo, esperto d’arte e organizzatore di grandi
+          mostre internazionali.
+        </p>
+        <Link
+          href={
+            "https://www.navigaresrl.com/mostra/van-gogh-multimedia-e-la-stanza-segreta-2/"
+          }
+          className={styles.link}
+        >
+          Info Mostra
+        </Link>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className={styles.iscrizione}>
+        <h4>
+          Iscriviti entro il 10 Ottobre alla nostra Waiting List per ricevere
+          uno sconto del 30%
+        </h4>
+        <h5>
+          * lo sconto verrà applicato SOLO per il biglietto INTERO FERIALE
+          acquistato in biglietteria
+        </h5>
+        <Link
+          href={
+            "mailto:web@navigaresrl.com?subject=Iscrizione Waiting List Van Gogh Parma"
+          }
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <p>SCRIVICI NOME E COGNOME</p>
+        </Link>
+        <h6>N.B : Cliccando su Invia autorizzi il trattamento dei tuoi dati</h6>
+      </div>
+      <div className={styles.footer}>
+        Una produzione di
+        <Link href={"https://www.navigaresrl.com/"}>NavigareSrl</Link>
       </div>
     </main>
-  )
+  );
 }
